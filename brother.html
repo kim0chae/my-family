@@ -4,20 +4,50 @@
 <title>brother</title>
 <meta charset="utf-8">
 <style>
+  body{
+    margin:0;
+  }
+  #active {
+    color:blue;
+  }
   a {
-    color:black;
+    color: black;
+    text-decoration: none;
   }
   h1 {
-    font-size:45px; text-align:center;
-  }
-  div {
+    font-size:45px;
     text-align:center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
   }
-  ol {
+  h2 {
+    font-size:20px;
+    text-align:center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:10px;
+  }
+  h3 {
+    font-size:30px;
+    margin:20px;
+    margin-left:0;
+  }
+  #grid {
+    border:1px solid gray;
+    display:grid;
+    grid-template-columns: 150px 1fr;
+  }
+  #grid ol {
     font-size: 25px;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
+    border-right:1px solid gray;
+    padding-left:60px;
+    padding-top:20px;
+    margin:0;
+  }
+  #grid div {
+    padding-left:50px;
+    padding-right:50px;
   }
 </style>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -32,22 +62,27 @@
 </head>
 <body>
   <h1><a href="index.html">[우리 가족]</a></h1>
-<div>
-  <p>우리 가족은 총 <u><strong>4명</strong></u>이다. 구성원은 다음과 같다.</p>
-<ol>
-  <li><a href="mom.html">엄마</a></li>
-  <li><a href="dad.html">아빠</a></li>
-  <li><a href="brother.html" style="color:red">오빠</a></li>
-  <li><a href="me.html">나</a></li>
-</ol>
-<h3 style=font-size:30px>3. 오빠</h3>
-<img src="brother.jpg" width="100%">
-<h4>
-  <p>1) 이름 : 김영도</p>
-  <p>2) 생년월일 : 1997년 6월 26일</p>
-  <p>3) 직업 : 대학생</p>
-</h4>
-</div>
+  <h2>
+    우리 가족은 총 4명이다. 구성원은 다음과 같다.
+  </h2>
+  <div id="grid">
+      <ol>
+        <li><a href="mom.html">엄마</a></li>
+        <li><a href="dad.html">아빠</a></li>
+        <li><a href="brother.html" id="active">오빠</a></li>
+        <li><a href="me.html">나</a></li>
+      </ol>
+    <div>
+      <h3>3. 오빠</h3>
+      <img src="brother.jpg" width="80%">
+      <h4>
+        <p>1) 이름 : 김영도</p>
+        <p>2) 생년월일 : 1997년 6월 26일</p>
+        <p>3) 직업 : 대학생</p>
+      </h4>
+    </div>
+  </div>
+
 <p>
   <div id="disqus_thread"></div>
 <script>
